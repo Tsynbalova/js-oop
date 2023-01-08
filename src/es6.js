@@ -5,10 +5,10 @@
 
 // Напишите функцию, которая принимает ФИО пользователя и возвращает
 // строку формата Имя Фамилия
-function fioToName(fio) 
-{
-    const splFio = fio.split(" ");
-    return splFio[1] + " " + splFio[0];
+function fioToName(fio) {
+    if(typeof fio != 'string') return false;
+    const [f, i] = fio.split(' ');
+    return `${i} ${f}`;
 }
 
 // преобразуйте массив чисел так, чтобы в нем остались только
